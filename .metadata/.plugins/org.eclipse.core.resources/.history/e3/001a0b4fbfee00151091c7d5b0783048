@@ -1,0 +1,10 @@
+
+public class practise {
+
+
+public static void main(String args[]){
+	String str="/Users/lqf/Documents/workspace/learn/src/baby.tiff";
+	   str=str.substring(str.indexOf("/")+1,str.indexOf(".")-1);
+	   System.out.println(str);
+}
+}

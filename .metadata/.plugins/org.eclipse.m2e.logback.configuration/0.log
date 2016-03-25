@@ -1,0 +1,48 @@
+2016-02-08 14:33:50,477 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not available. Remote download required.
+2016-02-09 12:09:54,981 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-02-16 14:26:54,527 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-02-16 18:10:17,563 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-02-17 11:56:53,227 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-02-21 18:06:53,778 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-02-22 13:22:37,424 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-02-24 12:06:30,775 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-02 13:54:52,640 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-04 11:57:34,887 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-06 11:35:43,419 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-10 13:50:58,807 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-12 12:15:00,383 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-12 13:22:32,632 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-13 13:35:50,553 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-16 10:27:23,467 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-17 12:57:55,151 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-17 13:07:45,121 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-17 13:12:09,627 [Thread-23] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-03-17 13:12:09,905 [Thread-24] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-03-17 13:48:03,552 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-17 13:48:26,602 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-19 11:47:34,580 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-19 11:48:04,446 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-19 11:49:08,499 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-19 16:43:10,662 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-20 12:38:44,714 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-20 12:40:34,174 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-22 14:47:33,231 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-22 14:54:56,721 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-23 12:12:18,573 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-23 12:28:24,925 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-23 15:45:13,859 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-25 11:39:55,727 [Thread-7] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-03-25 11:50:49,782 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-25 13:01:34,489 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-25 14:50:20,375 [Thread-284] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+

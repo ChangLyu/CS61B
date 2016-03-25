@@ -1,0 +1,9 @@
+package project1;
+
+public class pixel {
+	static short red;
+	static short green;
+    static short blue;
+
+
+}
