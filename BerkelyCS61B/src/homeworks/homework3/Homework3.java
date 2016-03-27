@@ -21,6 +21,8 @@ public class Homework3 {
    **/
 
   public static void smoosh(int[] ints) {
+	  //bad method
+	  /**
 	  int changelength=ints.length;
 	  for(int i=0; i<changelength-1; i++){
 		  if(ints[i]==ints[i+1]){
@@ -34,6 +36,23 @@ public class Homework3 {
 	  for(int i=changelength;i<ints.length;i++){
 		  ints[i]=-1;
 	  }
+	  **/
+	  //rewrite in mar 27
+	  int j=0,i=0;
+	  while(i<ints.length){
+		  ints[j]=ints[i];
+		  do{
+			  i++;
+		  }while(i<ints.length&&ints[j]==ints[i]);
+		  j++;
+	  }
+	  while(j<ints.length){
+		  ints[j]=-1;
+		  j++;
+	  }
+		  
+	  
+	  
     // Fill in your solution here.  (Ours is twelve lines long, not counting
     // blank lines or lines already present in this file.)
   }
