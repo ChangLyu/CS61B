@@ -1,4 +1,5 @@
 package homeworks.homework6.dict;
+import homeworks.homework6.linkedlist.*;
 
 /* HashTableChained.java */
 
@@ -20,7 +21,7 @@ public class HashTableChained implements Dictionary {
    *  Place any data fields here.
    **/
 	private int size;
-	public Entry[] entry;
+	public LinkedList[] linkedlist;
 
 
 
@@ -32,8 +33,10 @@ public class HashTableChained implements Dictionary {
 
   public HashTableChained(int sizeEstimate) {
 	  this.size=sizeEstimate;
-	  entry= new Entry[sizeEstimate];
-	  
+	  linkedlist= new LinkedList[sizeEstimate];
+	  for(int i=0; i<sizeEstimate; i++){
+		  linkedlist[i]=new LinkedList(null,0); 
+	  }
     // Your solution here.
   }
 
@@ -56,11 +59,12 @@ public class HashTableChained implements Dictionary {
    **/
 
   int compFunction(int code) {
-	
-	 float result=(float)code/(float)(Integer.MAX_VALUE-Integer.MIN_VALUE);
+	  
+	 float gap=(float)Integer.MAX_VALUE-(float)Integer.MIN_VALUE;
+	 float result=(float)code/gap;
 	 result=result*(this.size);
     // Replace the following line with your solution.
-     return (int) result;
+     return (int)result;
   }
 
   /** 
@@ -72,7 +76,11 @@ public class HashTableChained implements Dictionary {
 
   public int size() {
     // Replace the following line with your solution.
-    return ;
+	  int wholesize=0;
+	  for(int i=0; i<this.size;i++){
+		  wholesize=wholesize+linkedlist[i].getsize();
+	  }
+    return wholesize;
   }
 
   /** 
@@ -83,6 +91,11 @@ public class HashTableChained implements Dictionary {
 
   public boolean isEmpty() {
     // Replace the following line with your solution.
+	  for(int i=0;i<this.size;i++){
+		  if(this.linkedlist[i].head!=null){
+			  return false;
+		  }
+	  }
     return true;
   }
 
@@ -101,13 +114,18 @@ public class HashTableChained implements Dictionary {
 
   public Entry insert(Object key, Object value) {
 	    // Replace the following line with your solution.
-	  int i=0;
-	  while(this.entry[i].key!=null){
-		  i++;
+	  int index=this.compFunction(key.hashCode());
+	  if(this.linkedlist[index].head==null){
+		  this.linkedlist[index].head=new ListNode(key,value);
+		  return linkedlist[index].head;
 	  }
-	  this.entry[i].key=this.compFunction(key.hashCode());
-	  this.entry[i].value=value;
-    return entry[i];
+	  ListNode pointerNode=this.linkedlist[index].head;
+	  while(pointerNode.next!=null){
+		  pointerNode=pointerNode.next;
+	  }
+	  pointerNode.next=new ListNode(key,value);
+	  pointerNode.next.prev=pointerNode;
+      return linkedlist[index].head;
   }
 
   /** 
@@ -124,7 +142,12 @@ public class HashTableChained implements Dictionary {
 
   public Entry find(Object key) {
     // Replace the following line with your solution.
-    return null;
+	  int index=this.compFunction(key.hashCode());
+	  if(this.linkedlist[index].head==null){
+		  return null;
+		
+	  }else
+		  return linkedlist[index].head;
   }
 
   /** 
@@ -142,14 +165,32 @@ public class HashTableChained implements Dictionary {
 
   public Entry remove(Object key) {
     // Replace the following line with your solution.
-    return null;
+	  int index=this.compFunction(key.hashCode());
+	  
+	  if(this.linkedlist[index].head==null){
+		  return null;
+		
+	  }
+
+	  ListNode pointerNode=this.linkedlist[index].head;
+	
+	  while(pointerNode.next!=null){
+		  pointerNode=pointerNode.next;
+	  }
+	  ListNode returnentry=pointerNode;
+	  pointerNode.prev.next=null;
+	  returnentry.prev=null;
+      return returnentry;
   }
 
   /**
    *  Remove all entries from the dictionary.
    */
   public void makeEmpty() {
-    // Your solution here.
+	   // Your solution here.
+	  for(int i=0;i<this.size;i++){
+		  this.linkedlist[i].head=null;
+	  }
   }
 
 }

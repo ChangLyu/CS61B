@@ -67,9 +67,11 @@ public class SimpleBoard {
     // Replace the following line with your solution.  Be sure to return false
     //   (rather than throwing a ClassCastException) if "board" is not
     //   a SimpleBoard.
-    return false;
+	  if(this.hashCode()!=board.hashCode())
+		  return false;
+	  else 
+      return true;
   }
-
   /**
    *  Returns a hash code for this SimpleBoard.
    *  @return a number between Integer.MIN_VALUE and Integer.MAX_VALUE.
@@ -77,7 +79,20 @@ public class SimpleBoard {
 
   public int hashCode() {
     // Replace the following line with your solution.
-    return 99;
+	  double result=0;
+	  double n=0;
+	  double gap1=0;
+	  for(int i=0;i<DIMENSION;i++){
+		  for(int j=0;j<DIMENSION;j++){
+			  result=result+this.grid[i][j]*Math.pow(3, n);
+			  gap1=gap1+2*Math.pow(3,n);
+			   n++;
+		  }
+	  }
+	  double gap2=(double)Integer.MAX_VALUE-(double)Integer.MIN_VALUE;
+	  result=(result/gap1)*(gap2);
+		 
+    return (int)result;
   }
 
 }
