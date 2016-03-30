@@ -57,11 +57,14 @@ public class Homework6Test {
     }
     HashTableChained table = new HashTableChained(numBoards);
     initTable(table, numBoards);
-
-    // To test your hash function, add a method to your HashTableChained class
+ // To test your hash function, add a method to your HashTableChained class
     // that counts the number of collisions--or better yet, also prints
     // a histograph of the number of entries in each bucket.  Call this method
     // from here.
-  }
+
+    System.out.println(table.collisionCount);
+    System.out.println(table);
+
+      }
 
 }

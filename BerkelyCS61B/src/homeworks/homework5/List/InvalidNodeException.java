@@ -1,4 +1,4 @@
-package homeworks.homework5;
+package homeworks.homework5.List;
 
 /**
  *  Implements an Exception that signals an attempt to use an invalid ListNode.

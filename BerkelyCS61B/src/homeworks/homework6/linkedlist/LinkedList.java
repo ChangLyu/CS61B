@@ -2,7 +2,7 @@ package homeworks.homework6.linkedlist;
 
 public class LinkedList {
 	public ListNode head;
-	int size;
+	public int size;
 	public int getsize(){
 		return this.size;
 	}
