@@ -1,4 +1,4 @@
-package com.cs61b;
+package otherpractise;
 import java.io.*;
 public class Nuke2 {
 	public static void main(String[] args) throws Exception{

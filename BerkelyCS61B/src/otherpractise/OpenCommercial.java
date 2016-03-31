@@ -1,4 +1,4 @@
-package com.cs61b;
+package otherpractise;
 import java.io.*;
 import java.net.*;
 public class OpenCommercial {

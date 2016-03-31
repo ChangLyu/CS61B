@@ -1,4 +1,4 @@
-package com.cs61b;
+package otherpractise;
 
 class Names {
 

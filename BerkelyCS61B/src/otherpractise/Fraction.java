@@ -1,4 +1,4 @@
-package com.cs61b;
+package otherpractise;
 
 public class Fraction {
 	/* private fields within a Fraction. */

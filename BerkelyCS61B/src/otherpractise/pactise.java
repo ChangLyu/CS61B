@@ -1,4 +1,4 @@
-package com.cs61b;
+package otherpractise;
 
 public class pactise {
 	public static String parity(String msg){
