@@ -83,7 +83,7 @@ class SibTreeNode extends TreeNode {
 		  }else if(this.parent==null){
 			return new SibTreeNode();
 		}else{
-			return this.parent();
+			return this.parent;
 		}  
   }
 
@@ -140,17 +140,47 @@ class SibTreeNode extends TreeNode {
   public void insertChild(Object item, int c) throws InvalidNodeException {
     // FILL IN YOUR SOLUTION TO PART II HERE.
 	  if(isValidNode()){
-		  if(c<1){
-			  c=1;
-		  }
+		  if(c<1){ c=1; }
 		  if(this.firstChild==null){
-			  this.firstChild=new SibTreeNode();
-			  this.firstChild.setItem(item);
+			  this.firstChild=new SibTreeNode(this.myTree,item);
+			  this.firstChild.parent=this;
+			  this.myTree.size++;
 		  }else{
-			  SibTreeNode pointerNode=this.firstChild;
-			  
+			  SibTreeNode pointerNode,pointerNode2;
+			  //when c==1, insert into the first child, this situation is different from c>1, considering the connect between parents node and first child node
+			  if(c==1){
+				  pointerNode=this.firstChild;
+				  this.firstChild=new SibTreeNode(this.myTree,item);
+				  this.firstChild.parent=this;
+				  this.firstChild.nextSibling=pointerNode;
+				  this.myTree.size++;
+			  }else{	
+					  //two situation,first is there are not c number of children in node, other is number of childen is above c
+					  pointerNode=(SibTreeNode) this.child(c-1);
+					  if(pointerNode.valid==false){
+						  pointerNode=this.firstChild;
+						  while(pointerNode.nextSibling().valid==true){
+							  pointerNode=pointerNode.nextSibling;
+						  }
+						  pointerNode.nextSibling=new SibTreeNode(this.myTree,item);
+						  pointerNode.nextSibling.parent=this;	
+						  this.myTree.size++;
+					  }else{
+						  if(pointerNode.nextSibling().valid==true){
+							  pointerNode2=pointerNode.nextSibling;
+							  pointerNode.nextSibling=new SibTreeNode(this.myTree,item);
+							  pointerNode.nextSibling.parent=this;
+							  this.myTree.size++;
+							  pointerNode.nextSibling.nextSibling=pointerNode2;
+						  }else{
+							  pointerNode.nextSibling=new SibTreeNode(this.myTree,item);
+							  pointerNode.nextSibling.parent=this;
+							  this.myTree.size++;
+						  }		 				  
+					  }
+			  }	  
 		  }
-		  SibTreeNode pointerNode=
+		  
 	  }else{
 		  throw new InvalidNodeException();
 	  }
@@ -164,6 +194,39 @@ class SibTreeNode extends TreeNode {
    */
   public void removeLeaf() throws InvalidNodeException {
     // FILL IN YOUR SOLUTION TO PART III HERE.
+	  if(this.isValidNode()==true){
+		  if(this.child(1).valid==true){
+			  return;
+		  }else{
+			  if(this.parent().valid==false){
+				  // this is a root 
+				  this.myTree.root=new SibTreeNode();
+				  this.valid=false;
+				  this.myTree.size--;
+				  return;
+			  }
+			 SibTreeNode pointerNode= this.parent.firstChild;
+			 int c=1;
+			  while(pointerNode.valid==true){
+				  if(pointerNode.hashCode()==this.hashCode()){
+					  if(c==1){
+						  this.parent.firstChild=pointerNode.nextSibling;
+						  this.myTree.size--;
+						pointerNode.valid=false;
+					  }else{
+					((SibTreeNode)(this.parent.child(c-1))).nextSibling=pointerNode.nextSibling;
+					this.myTree.size--;
+					pointerNode.valid=false;
+					  }
+				  }else{
+					  c++;
+				  pointerNode=pointerNode.nextSibling;}
+			  }
+		  }
+		  
+	  }else{
+		  throw new InvalidNodeException();
+	  }
   }
 
 }
